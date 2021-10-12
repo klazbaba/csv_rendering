@@ -5,6 +5,8 @@ platform :ios, '11.0'
 
 target 'csv_rendering' do
   config = use_native_modules!
+  
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
 
   use_react_native!(
     :path => config[:reactNativePath],
