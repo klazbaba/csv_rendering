@@ -25,8 +25,8 @@ export default class App extends Component<any, State> {
     if (JSON.stringify(rows) === '[""]') return null;
 
     return rows.map((row, index) => {
-      const columns = row.split(',').map(item => (
-        <View style={styles.column}>
+      const columns = row.split(',').map((item, index) => (
+        <View style={styles.column} key={index}>
           <Text>{item}</Text>
         </View>
       ));
